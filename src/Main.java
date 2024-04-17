@@ -23,6 +23,11 @@ public class Main {
         System.out.printf("%d월 %d일은 %s입니다.", month, day, anni);
 
 
+        int x = 10, y = 20;
+
+        System.out.println(x > 10 && (y / 0 == 10)); //false
+        System.out.println(x > 10 || y < 30); //true
+
 
     }
 
