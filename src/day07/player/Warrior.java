@@ -19,9 +19,8 @@ public class Warrior extends Player{
 
     // 닉네임만 외부에서 결정
     public Warrior(String nickname) {
-        this.nickname = nickname;
-        this.level = 1;
-        this.hp = 50;
+        //super(); //> 부모의 생성자 중에 괄호안이 빈거 불러~~
+        super(nickname);
         this.rage = 100;
     }
 

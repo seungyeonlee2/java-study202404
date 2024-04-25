@@ -5,6 +5,7 @@ import util.SimpleInput;
 // 역할: 회원 데이터 관리를 위해 입력 출력을 담당함
 public class MemberView {
 
+
     // 객체의 협력
     MemberRepository mr;
     SimpleInput si;
@@ -35,6 +36,12 @@ public class MemberView {
         String name = si.input("- 이름: ");
         String password = si.input("- 패스워드: ");
         String gender = si.input("- 성별: ");
+        if (gender.equals("남성")) {
+            gender = MemberContants.MALE;
+        } else if (gender.equals("여성")) {
+            gender = MemberContants.FEMALE;
+        }
+
         int age = Integer.parseInt(si.input("- 나이: "));
 
         // 입력데이터를 기반으로 한 명의 회원 객체를 생성
@@ -159,5 +166,9 @@ public class MemberView {
             System.out.println("\n# 해당 회원은 복구대상이 아닙니다.");
         }
 
+    }
+
+    public void load() {
+        mr.loadFile();
     }
 }
